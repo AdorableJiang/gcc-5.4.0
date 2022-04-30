@@ -921,7 +921,7 @@ POST_SYSCALL(newfstat)(long res, long fd, void *statbuf) {
   }
 }
 
-#if !SANITIZER_ANDROID
+#if !SANITIZER_LINUX && !SANITIZER_ANDROID
 PRE_SYSCALL(ustat)(long dev, void *ubuf) {}
 
 POST_SYSCALL(ustat)(long res, long dev, void *ubuf) {
