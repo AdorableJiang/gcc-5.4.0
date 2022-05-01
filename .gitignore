@@ -48,5 +48,11 @@ lost+found
 LAST_UPDATED
 REVISION
 
-# ignore 
+# ignore .vscode
 .vscode
+
+# ignore dowloaded files
+gmp*
+isl*
+mpc*
+mpfr*
