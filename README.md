@@ -1,6 +1,16 @@
 # gcc-5
 
-Build gcc-5 on `Ubuntu 20.04` with `gcc-9`. Problems listed [here](https://blog.csdn.net/tuibianhuaisheng/article/details/115399019) are fixed and tested.
+Build gcc-5 on `Ubuntu 20.04` with `gcc-9`. Problems listed [here](https://blog.csdn.net/tuibianhuaisheng/article/details/115399019) are fixed and tested. 
+
+## Prerequest
+
+Make sure `gcc-9` is installed on your distro. `gcc` other than version 9 and 11 are NOT tested.
+
+`gcc-11` is tested to be too new to build `gcc-5` as discussed [here](https://github.com/Freetz-NG/freetz-ng/discussions/396#discussioncomment-1525316). In practical, an error would be thrown:
+
+```bash
+use of an operand of type ‘bool’ in ‘operator++’ is forbidden in C++17
+```
 
 ## Usage
 
@@ -10,7 +20,7 @@ cd gcc-5.4.0
 ./contrib/download_prerequisites
 mkdir gcc-build-5.4.0
 cd gcc-build-5.4.0
-../configure --prefix=/usr/local --enable-checking=release --enable-languages=c,c++ --disable-multilib
+CC=[/path/to/gcc-9] CXX=[/path/to/g++-9] ../configure --prefix=/usr/local --enable-checking=release --enable-languages=c,c++ --disable-multilib
 ```
 
 For explanation of `gcc-5.4.0/configure` options, check section `Options specification` of [Installing GCC: Configuration](https://gcc.gnu.org/install/configure.html).
