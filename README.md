@@ -25,10 +25,10 @@ CC=[/path/to/gcc-9] CXX=[/path/to/g++-9] ../configure --prefix=/usr/local --enab
 
 For explanation of `gcc-5.4.0/configure` options, check section `Options specification` of [Installing GCC: Configuration](https://gcc.gnu.org/install/configure.html).
 
-Now you are all set to build `gcc-5`. Set `$nproc` to (at maximum) the number of threads your CPU support for faster building. E.g. on a CPU support 16 threads, use `make -j16`.
+Now you are all set to build `gcc-5`.
 
 ```bash
-make -j$nproc
+make -j$(nproc)
 sudo make install
 ```
 
