@@ -1,6 +1,6 @@
 # gcc-5
 
-Build gcc-5 on `Ubuntu 20.04` with `gcc-9`. Problems listed [here](https://blog.csdn.net/tuibianhuaisheng/article/details/115399019) are fixed and tested. 
+Build gcc-5 on `Ubuntu 20.04` with `gcc-9`. Problems listed [here](https://blog.csdn.net/tuibianhuaisheng/article/details/115399019) are fixed and tested.
 
 ## Prerequest
 
