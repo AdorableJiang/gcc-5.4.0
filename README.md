@@ -51,3 +51,14 @@ Copyright © 2015 Free Software Foundation, Inc.
 ```
 
 If you encountered problems using this repo, check [here](https://blog.csdn.net/tuibianhuaisheng/article/details/115399019) or cached offline `reference/ubuntu_install_gcc5.4.html` for help.
+
+## Uninstall
+
+To uninstall gcc installed from source, run `uninstall.sh` under gcc build directory as root. That is `gcc-build-5.4.0` if you follow the instructions above.
+
+```bash
+cp uninstall.sh gcc-build-5.4.0/ && cd gcc-build-5.4.0/
+sudo bash uninstall.sh
+```
+
+Reference: [How to uninstall gcc installed from source?](https://stackoverflow.com/a/28725422)

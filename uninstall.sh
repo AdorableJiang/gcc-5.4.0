@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+make install DESTDIR=/tmp/gccinst
+
+find /tmp/gccinst -type f | sed -e s,/tmp/gccinst,, | \
+    (while read F; do rm "$F"; done)
+
+find /tmp/gccinst -depth -type d -not -empty | sed -e s,/tmp/gccinst,, | \
+    (while read F; do rmdir -p --ignore-fail-on-non-empty "$F"; done)
